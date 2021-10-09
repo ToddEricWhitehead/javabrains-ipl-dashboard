@@ -16,6 +16,7 @@ public class MatchInput {
 	private String result;
 	private String result_margin;
 	private String eliminator;
+	private String method;
 	private String umpire1;
 	private String umpire2;
 	
@@ -102,6 +103,12 @@ public class MatchInput {
 	}
 	public void setEliminator(String eliminator) {
 		this.eliminator = eliminator;
+	}
+	public String getMethod() {
+		return method;
+	}
+	public void setMethod(String method) {
+		this.method = method;
 	}
 	public String getUmpire1() {
 		return umpire1;
