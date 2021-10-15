@@ -1,7 +1,7 @@
 package io.javabrains.ipldashboard.data;
 
 public class MatchInput {
-	// id,city,date,player_of_match,venue,neutral_venue,team1,team2,toss_winner,toss_decision,winner,result,result_margin,eliminator,method,umpire1,umpire2
+	// id,city,date,player_of_match,venue,neutral_venue,team1,team2,toss_winner,toss_decision,match_winner,result,result_margin,eliminator,method,umpire1,umpire2
 	private String id;
 	private String city;
 	private String date;
@@ -12,7 +12,7 @@ public class MatchInput {
 	private String team2;
 	private String toss_winner;
 	private String toss_decision;
-	private String winner;
+	private String match_winner;
 	private String result;
 	private String result_margin;
 	private String eliminator;
@@ -80,12 +80,14 @@ public class MatchInput {
 	public void setToss_decision(String toss_decision) {
 		this.toss_decision = toss_decision;
 	}
-	public String getWinner() {
-		return winner;
+	
+	public String getMatch_winner() {
+		return match_winner;
 	}
-	public void setWinner(String winner) {
-		this.winner = winner;
+	public void setMatch_winner(String match_winner) {
+		this.match_winner = match_winner;
 	}
+	
 	public String getResult() {
 		return result;
 	}
@@ -127,7 +129,7 @@ public class MatchInput {
 	public String toString() {
 		return "MatchInput [id=" + id + ", city=" + city + ", date=" + date + ", player_of_match=" + player_of_match
 				+ ", venue=" + venue + ", neutral_venue=" + neutral_venue + ", team1=" + team1 + ", team2=" + team2
-				+ ", toss_winner=" + toss_winner + ", toss_decision=" + toss_decision + ", winner=" + winner
+				+ ", toss_winner=" + toss_winner + ", toss_decision=" + toss_decision + ", match_winner=" + match_winner
 				+ ", result=" + result + ", result_margin=" + result_margin + ", eliminator=" + eliminator
 				+ ", umpire1=" + umpire1 + ", umpire2=" + umpire2 + "]";
 	}

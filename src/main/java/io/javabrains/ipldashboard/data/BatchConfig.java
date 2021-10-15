@@ -26,7 +26,7 @@ import io.javabrains.ipldashboard.model.Match;
 public class BatchConfig {
 	
 	private String[] FIELD_NAMES = new String[] {
-			"id","city","date","player_of_match","venue","neutral_venue","team1","team2","toss_winner","toss_decision","winner","result","result_margin","eliminator","method","umpire1","umpire2"
+			"id","city","date","player_of_match","venue","neutral_venue","team1","team2","toss_winner","toss_decision","match_winner","result","result_margin","eliminator","method","umpire1","umpire2"
 	};
 	
 	@Autowired
