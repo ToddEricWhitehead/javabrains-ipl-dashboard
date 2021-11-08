@@ -1,11 +1,15 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import { TeamPage } from './pages/TeamPage';
 
 function App() {
   return (
     <div className="App">
-    	<TeamPage />
+    	<Router>
+    		<Route path="/team/:teamName">
+    			<TeamPage />
+    		</Route>
+    	</Router>
     </div>
   );
 }
