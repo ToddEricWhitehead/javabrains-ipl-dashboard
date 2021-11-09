@@ -1,10 +1,11 @@
 import { React } from 'react';
 
-export const MatchSmallCard = ({match}) => {
+export const MatchSmallCard = ({teamName, match}) => {
+	const otherTeam = match.team1 === teamName ? match.team2 : match.team1;
 	return (
 		<div className="MatchSmallCard">
-			<p>Match Small Card</p>
-			<p>{match.team1} vs {match.team2} --> Winner : {match.matchWinner}</p>
+			<h3>vs {otherTeam}</h3>
+			<p>{match.matchWinner} won by {match.resultMargin} {match.result}</p>			
 		</div>
 	)	
 }

@@ -22,12 +22,15 @@ export const TeamPage = () => {
 		}, []
 	);
 	
+	if (!team || !team.teamName) {
+		return <h1>Team NOT found</h1>
+	}
+	
 	return (
 		<div className="TeamPage">
-			<h1>Rajasthan Royals - Big Dogs</h1>
 			<h1>{team.teamName}</h1>
-			<MatchDetailCard match={team.matches[0]}/>
-			{team.matches.slice(1).map(match => <MatchSmallCard match={match}/>)}
+			<MatchDetailCard teamName={team.teamName} match={team.matches[0]}/>
+			{team.matches.slice(1).map(match => <MatchSmallCard teamName={team.teamName} match={match}/>)}
 		</div>
 	)
 }
