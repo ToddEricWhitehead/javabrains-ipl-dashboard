@@ -19,7 +19,7 @@ export const TeamPage = () => {
 			};
 			fetchMatches();
 			
-		}, []
+		}, [teamName]
 	);
 	
 	if (!team || !team.teamName) {
