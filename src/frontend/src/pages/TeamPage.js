@@ -2,6 +2,7 @@ import { React, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { MatchDetailCard } from '../components/MatchDetailCard.js';
 import { MatchSmallCard } from '../components/MatchSmallCard.js';
+import { MyPieChart } from '../components/MyPieChart.js';
 
 import './TeamPage.scss';
 
@@ -33,7 +34,10 @@ export const TeamPage = () => {
 			<div className="team-name-section">
 				<h1 className="team-name">{team.teamName}</h1>
 			</div>
-			<div className="win-loss-section">Wins / Losses</div>
+			<div className="win-loss-section">
+				Wins / Losses
+				<MyPieChart team={team} />
+			</div>
 			<div className="match-detail-section">
 				<h3>Latest Matches</h3>
 				<MatchDetailCard teamName={team.teamName} match={team.matches[0]} />
